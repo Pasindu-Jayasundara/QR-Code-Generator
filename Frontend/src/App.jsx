@@ -154,6 +154,10 @@ function App() {
           </div>
         </aside>
       </section>
+
+      <footer className="site-footer">
+        Developed by <a href="https://www.kryvazent.com/" target="_blank" rel="noreferrer">Kryvazent</a>
+      </footer>
     </main>
   )
 }
