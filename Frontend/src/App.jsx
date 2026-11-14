@@ -110,11 +110,12 @@ function App() {
 
   return (
     <main className="app-shell">
-      <header className="topbar">
-        <a className="brand" href="#top" aria-label="QR Code Generator home">
-          <span className="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 14h2v6h-2zM14 18h2v2h-2z" /></svg></span>
-          <span>QR code generator</span>
+      <header className="product-header">
+        <a className="product-brand" href="#top" aria-label="QR Code Generator home">
+          <img className="product-brand-logo" src="/qr-code-generator.svg" alt=""/>
+          <span><strong>QR CODE GENERATOR</strong><small>BY KRYVAZENT</small></span>
         </a>
+        <a className="product-header-link" href="https://www.kryvazent.com/" target="_blank" rel="noopener noreferrer">More from Kryvazent <span aria-hidden="true">&#8599;</span></a>
       </header>
 
       <section className="generator" id="top">
@@ -160,9 +161,7 @@ function App() {
         </aside>
       </section>
 
-      <footer className="site-footer">
-        Developed by <a href="https://www.kryvazent.com/" target="_blank" rel="noreferrer">Kryvazent</a>
-      </footer>
+      <footer className="product-footer"><a className="footer-brand" href="https://www.kryvazent.com/" target="_blank" rel="noopener noreferrer"><img src="/kryvazent-logo.png" alt=""/><span><strong>KRYVAZENT</strong><small>SOFTWARE ENGINEERING</small></span></a><div className="footer-product-info"><strong>QR CODE GENERATOR</strong><span>Create and download custom QR codes.</span></div><a className="footer-visit" href="https://www.kryvazent.com/" target="_blank" rel="noopener noreferrer">Visit Kryvazent <span aria-hidden="true">&#8599;</span></a></footer>
     </main>
   )
 }
