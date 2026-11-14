@@ -86,15 +86,20 @@ function App() {
       const mark = new Image()
       mark.src = logo
       await new Promise((resolve, reject) => { mark.onload = resolve; mark.onerror = reject })
-      const markSize = size * (Number(logoSize) / 100)
+      const maxMarkSize = size * (Number(logoSize) / 100)
       const inset = size * 0.019
-      const outerSize = markSize + inset * 2
+      const scale = Math.min(maxMarkSize / mark.naturalWidth, maxMarkSize / mark.naturalHeight)
+      const markWidth = mark.naturalWidth * scale
+      const markHeight = mark.naturalHeight * scale
+      const outerSize = maxMarkSize + inset * 2
       const left = (size - outerSize) / 2
+      const markLeft = (size - markWidth) / 2
+      const markTop = (size - markHeight) / 2
       context.fillStyle = '#ffffff'
       context.beginPath()
       context.roundRect(left, left, outerSize, outerSize, size * 0.028)
       context.fill()
-      context.drawImage(mark, left + inset, left + inset, markSize, markSize)
+      context.drawImage(mark, markLeft, markTop, markWidth, markHeight)
     }
     const mime = format === 'jpeg' ? 'image/jpeg' : `image/${format}`
     const anchor = document.createElement('a')
