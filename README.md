@@ -44,3 +44,9 @@ npm run lint     # Run ESLint
 ## Privacy
 
 QR codes are generated in the browser. The entered content and uploaded logo are not sent to a server by this application.
+
+## Project
+
+- Frontend source: [`Frontend/`](Frontend/)
+- Live app: https://qr-code-generator-tan-zeta.vercel.app/
+- Developed by [Kryvazent](https://www.kryvazent.com/)
